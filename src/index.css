@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Permanent Marker", "Segoe UI", cursive;
+  --font-body: "Archivo", "Segoe UI", system-ui, sans-serif;
+
+  --color-wall: #6B4A2C;
+  --color-wall-deep: #4A3119;
+  --color-tag: #F4E6C4;
+  --color-tag-edge: #E3CC9C;
+  --color-ink: #2B2318;
+  --color-ink-soft: #5B4A36;
+  --color-accent: #C23A17;
+  --color-accent-bright: #E2551F;
+  --color-accent-hover: #A82F12;
+  --color-accent-ink: #FFF6E9;
+  --color-paper-onwall: #E9D6A8;
+
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-wall);
+  color: var(--color-paper-onwall);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* pegboard wall texture, shared by every section */
+.pegboard {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.16) 1.4px, transparent 1.6px);
+  background-size: 28px 28px;
+}
+
+/* the tag: the one reusable object on the page, punched with a real hole */
+.tag {
+  --hole-x: 30px;
+  --hole-y: 26px;
+  --hole-r: 7px;
+  position: relative;
+  background: var(--color-tag);
+  border-radius: 18px;
+  box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.55), 0 2px 0 var(--color-tag-edge) inset;
+  -webkit-mask-image: radial-gradient(circle at var(--hole-x) var(--hole-y), transparent var(--hole-r), black calc(var(--hole-r) + 1.2px));
+  mask-image: radial-gradient(circle at var(--hole-x) var(--hole-y), transparent var(--hole-r), black calc(var(--hole-r) + 1.2px));
+  transition: transform 0.25s var(--ease-settle), box-shadow 0.25s var(--ease-settle);
+}
+
+.tag::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--hole-x) - var(--hole-r) - 2.5px);
+  top: calc(var(--hole-y) - var(--hole-r) - 2.5px);
+  width: calc((var(--hole-r) + 2.5px) * 2);
+  height: calc((var(--hole-r) + 2.5px) * 2);
+  border-radius: 50%;
+  border: 2.5px solid var(--color-tag-edge);
+  pointer-events: none;
+}
+
+.tag:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 20px 34px -14px rgba(0, 0, 0, 0.6), 0 2px 0 var(--color-tag-edge) inset;
+}
+
+/* reveal-on-scroll: one authored motion grammar, reused everywhere */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px) rotate(calc(var(--tilt, 0deg) - 3deg));
+  transition: opacity 0.7s var(--ease-settle), transform 0.7s var(--ease-settle);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: rotate(var(--tilt, 0deg));
+}
+
+.tag-sway {
+  animation: sway 7s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(calc(var(--tilt, 0deg) - 0.6deg)); }
+  50% { transform: rotate(calc(var(--tilt, 0deg) + 0.6deg)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { transition: opacity 0.4s ease; transform: none !important; }
+  .tag-sway { animation: none; }
+  .tag { transition: none; }
+}
