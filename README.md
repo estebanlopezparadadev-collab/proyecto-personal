@@ -56,9 +56,9 @@ npm run preview   # sirve esa versión de producción en local, para probarla
 
 ## Antes de publicar: lo único que tienes que cambiar
 
-Abre `src/config/whatsapp.js` y reemplaza `"57XXXXXXXXXX"` por tu número real de WhatsApp (código de país + número, sin espacios ni `+`). Es el único lugar del proyecto donde aparece.
+Abre `src/config/whatsapp.js` y reemplaza el número por tu número real de WhatsApp (código de país + número, sin espacios ni `+`). Es el único lugar del proyecto donde aparece.
 
-También reemplaza `public/og-image.jpg` (agrégala si no existe) por una imagen real de 1200×630px — es la que se ve cuando alguien comparte el link por WhatsApp o redes. Mientras no la agregues, el link se compartirá sin imagen de vista previa.
+`public/og-image.jpg` ya existe (generada con el mismo sistema de diseño del sitio: la tarjeta del hero, la mascota y la mancha de fondo) — es la que se ve cuando alguien comparte el link por WhatsApp o redes. Si más adelante quieres reemplazarla por otra, solo sobrescribe ese archivo (1200×630px).
 
 ## Flujo de ramas en Git
 
@@ -99,9 +99,10 @@ Este proyecto ya está publicado en `https://estebanlopezparadadev-collab.github
 
 Si en algún momento cambias el nombre del repositorio, actualiza esa misma línea en `vite.config.js` (y el `og:image` en `index.html`) para que coincida con el nuevo nombre, y vuelve a hacer push a `main`.
 
-## Qué falta para dejarlo 100% listo
+## Estado
 
-- [ ] Reemplazar el número de WhatsApp en `src/config/whatsapp.js`
-- [ ] Agregar `public/og-image.jpg` (1200×630px) para la vista previa al compartir el link
-- [ ] Crear el repositorio en GitHub y conectarlo (`git remote add origin ...`)
-- [ ] Activar GitHub Pages con fuente "GitHub Actions" en la configuración del repositorio
+- [x] Número de WhatsApp real configurado en `src/config/whatsapp.js`
+- [x] `public/og-image.jpg` generada para la vista previa al compartir el link
+- [x] Repositorio en GitHub conectado
+- [x] GitHub Pages activo con fuente "GitHub Actions"
+- [x] Publicado en `https://estebanlopezparadadev-collab.github.io/proyecto-personal/`
