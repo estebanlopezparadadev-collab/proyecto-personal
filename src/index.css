@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Permanent Marker", "Segoe UI", cursive;
+  --font-display: "Arvo", Georgia, serif;
   --font-body: "Archivo", "Segoe UI", system-ui, sans-serif;
 
   --color-wall: #F5EAD3;
@@ -15,6 +15,7 @@
   --color-accent-hover: #A82F12;
   --color-accent-ink: #FFF6E9;
   --color-paper-onwall: #2B2318;
+  --color-blob: #9DBBAE;
 
   --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -45,23 +46,28 @@ body {
 
 /* pegboard wall texture, shared by every section — drilled holes with real depth */
 .pegboard {
-  background-image:
-    radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.10) 0, transparent 45%),
-    radial-gradient(rgba(0, 0, 0, 0.42) 1.6px, transparent 1.9px),
-    radial-gradient(rgba(255, 255, 255, 0.06) 1.9px, transparent 2.1px);
-  background-position: 0 0, 0 0, 1px 1px;
-  background-size: 28px 28px, 28px 28px, 28px 28px;
+  background-image: none;
+}
+
+/* one soft decorative shape, muted so it stays behind the mascot and the card */
+.blob {
+  position: absolute;
+  background: var(--color-blob);
+  opacity: 0.35;
+  border-radius: 62% 38% 55% 45% / 45% 55% 45% 55%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* the hung object: string + peg + the tag itself, rotating as one unit */
 .tag-wrap {
   position: relative;
-  transform: rotate(var(--tilt, 0deg));
+  transform: none;
   transition: transform 0.25s var(--ease-settle);
 }
 
 .tag-wrap:hover {
-  transform: rotate(0deg) translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .tag-wrap:hover .tag {
@@ -69,75 +75,22 @@ body {
 }
 
 .tag-string {
-  position: absolute;
-  top: -30px;
-  left: 12px;
-  width: 40px;
-  height: 58px;
-  overflow: visible;
-  pointer-events: none;
+  display: none;
 }
 
-.tag-string path {
-  fill: none;
-  stroke: #B08A54;
-  stroke-width: 2;
-  stroke-linecap: round;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
-}
-
-.tag-string .peg {
-  fill: #241a10;
-}
-
-.tag-string .peg-shine {
-  fill: rgba(255, 255, 255, 0.35);
-}
-
-/* the tag: the one reusable object on the page, punched with a real hole */
+/* the tag: the one reusable object on the page — plain outlined card (Pixie preview) */
 .tag {
-  --hole-x: 30px;
-  --hole-y: 26px;
-  --hole-r: 6px;
   position: relative;
-  background:
-    radial-gradient(rgba(43, 35, 24, 0.035) 0.6px, transparent 0.9px) 0 0 / 5px 5px,
-    radial-gradient(rgba(255, 255, 255, 0.5) 0.6px, transparent 0.9px) 2.5px 2.5px / 5px 5px,
-    var(--color-tag);
+  background: var(--color-tag);
   border-radius: 18px;
   border: 2.5px solid var(--color-ink);
   box-shadow: 5px 5px 0 var(--color-ink);
-  -webkit-mask-image: radial-gradient(circle at var(--hole-x) var(--hole-y), transparent var(--hole-r), black calc(var(--hole-r) + 1.2px));
-  mask-image: radial-gradient(circle at var(--hole-x) var(--hole-y), transparent var(--hole-r), black calc(var(--hole-r) + 1.2px));
   transition: box-shadow 0.25s var(--ease-settle);
 }
 
-/* reinforcement sticker: the white ring real shipping/price tags use around the punched hole */
-.tag::before {
-  content: "";
-  position: absolute;
-  left: calc(var(--hole-x) - var(--hole-r) - 5px);
-  top: calc(var(--hole-y) - var(--hole-r) - 5px);
-  width: calc((var(--hole-r) + 5px) * 2);
-  height: calc((var(--hole-r) + 5px) * 2);
-  border-radius: 50%;
-  background: #FFFDF7;
-  border: 1px solid var(--color-tag-edge);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-}
-
-/* the hole itself: a dark cavity, not just cut paper */
+.tag::before,
 .tag::after {
-  content: "";
-  position: absolute;
-  left: calc(var(--hole-x) - var(--hole-r));
-  top: calc(var(--hole-y) - var(--hole-r));
-  width: calc(var(--hole-r) * 2);
-  height: calc(var(--hole-r) * 2);
-  border-radius: 50%;
-  box-shadow: inset 0 1.5px 3px rgba(0, 0, 0, 0.5);
-  pointer-events: none;
+  content: none;
 }
 
 /* reveal-on-scroll: one authored motion grammar, reused everywhere */
@@ -166,3 +119,7 @@ body {
   .tag-sway { animation: none; }
   .tag-wrap { transition: none; }
 }
+
+/* Pixie preview: flat cards, no tilt, no sway */
+[data-reveal].is-visible { transform: none; }
+.tag-sway { animation: none; }

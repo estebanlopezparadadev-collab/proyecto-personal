@@ -11,18 +11,23 @@ Audience: non-technical small business owners in Bogotá, viewing on mobile, arr
 
 ## Direction contract
 
-THESIS: The page owns "your problem already has a price tag" — every symptom and every fix reads like an item hanging in a ferretería, priced and ready, refusing the SaaS-gradient/dark-agency hero every dev-services page defaults to.
+THESIS: A confident, friendly "fixer" brand: flat black-outlined cards with a hard offset shadow on a warm cream ground, refusing both the SaaS-gradient/dark-agency default and (after user testing) the earlier hand-marker hardware-tag concept this project shipped first.
 
-OWN-WORLD: Warm cream cardstock ground (revised from the original kraft-brown after comparing against acclaimed real freelance landing pages on landingfolio.com, which skew light/warm, not dark/corporate), thick black-marker display lettering for headlines/prices, a plain workhorse grotesk for body copy, one committed hardware-store safety-orange/red carrying real coverage (buttons, price numbers, the punched-hole motif) — never a scattered accent. Every content block is a "tag": rounded-corner card, a real punched hole with a white paper reinforcement ring and a hand-drawn twine loop up to a peg, a faint cast shadow, a few degrees of hand-hung rotation per tag so the wall reads assembled by hand, not templated.
+OWN-WORLD: Warm cream background (`#F5EAD3`/`#E9D6AC`), near-white cards (`#FFFCF4`) with a solid `2.5px` ink-colored border and a `5px 5px 0` hard offset shadow (no blur) — a deliberately neobrutalist-adjacent device, earned because the world commits to it everywhere. Arvo (slab serif) for display type, Archivo for body. One committed orange-red accent for all CTAs/prices/icons. One muted sage-green blob as the only secondary color, used once behind the hero as a background shape. One mascot: a smiling browser-window character, used once in the hero.
 
-STORY: Visitor lands mid-symptom ("¿Tu página tiene problemas?"), recognizes their own tag among 4-6 problem-tags, sees the fix already priced under "desde," is walked through 3 hung steps, meets Julian on one trust tag, and taps the same WhatsApp button repeated top and bottom.
+STORY: unchanged from the original brief — visitor lands mid-symptom, recognizes their problem among 4-6 cards, sees the fix already priced under "desde," is walked through 3 steps, meets Julian, taps WhatsApp (repeated top and bottom).
 
-FIRST VIEWPORT: One large hero tag fills the screen — punched hole top-left with visible string to a peg, hand-marker headline plus one-line subtitle, a big orange WhatsApp tag-button, ever so slightly rotated as if just hung, cream pegboard wall texture behind it.
+FIRST VIEWPORT: One outlined hero card on the cream ground, a soft green blob peeking from behind it, the mascot pinned to its top-right corner, serif headline, orange WhatsApp button with a hard shadow.
 
-FORM: "Etiqueta de ferretería" (hardware-store price tag), position 6 of 7 in the audience-derived candidate list, assigned by concept-seed roll (seed key b34df1f9). Raised over three declined catalog challengers: committed accent-color density from the cutting-bench-rail challenger, a fixed-scale antes/después comparison pairing from the botanical-folio challenger, and a visible "mended tag" repair motif from the raku-ceramics challenger.
+FORM: Direction pivoted twice mid-build at the user's explicit, iterative request, driven by real reference sites rather than the original concept-seed roll:
+1. Original assigned form ("etiqueta de ferretería", seed key b34df1f9) shipped first — hand-marker font, punched hole, twine, peg, pegboard wall.
+2. User's friend suggested a dark "professional portfolio" palette; checked against real landingfolio.com examples (Bob Meijer, Jack McDade) — neither was dark/corporate — so only the base palette moved from kraft-brown to warm cream, keeping the tag/string mechanic.
+3. User found trypixie.io (via landingfolio.com) and asked to adopt its look; after a hybrid preview (tags + black outline/hard shadow) and a full preview (flat cards, no tags/string, serif type), the user chose the full pivot, then asked for a heavier serif (Arvo replaced Instrument Serif) plus a mascot and one background blob.
+
+This surface's FORM is now user-pinned to the Pixie-inspired flat-card world; the original concept-seed roll and its raises are historical record only, not the active direction.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 
 ## Unresolved decisions
 
-None outstanding. Stack changed mid-build from static HTML/CSS/JS to React + Vite + Tailwind at the user's explicit request. Palette changed mid-build from kraft-brown to warm cream after user feedback (relayed from a friend's voice note preferring a dark "professional portfolio" look) was checked against real examples on landingfolio.com — neither of the two top-viewed freelance examples inspected (Bob Meijer, Jack McDade) was dark/gray-corporate, both warm or hand-drawn/playful — and the user chose the warm-cream direction over reverting to dark.
+None outstanding. See FORM above for the full history of direction changes, all driven by explicit user requests.

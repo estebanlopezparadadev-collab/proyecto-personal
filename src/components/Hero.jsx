@@ -1,5 +1,6 @@
 import Tag from "./Tag";
 import { WhatsAppIcon } from "./icons";
+import Mascot from "./icons/Mascot";
 import { whatsappLink } from "../config/whatsapp";
 
 export default function Hero() {
@@ -7,15 +8,17 @@ export default function Hero() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="pegboard flex min-h-[92svh] items-center bg-wall-deep bg-gradient-to-b from-wall to-wall-deep px-5 py-12 sm:px-8 lg:px-8 lg:py-16"
+      className="pegboard relative flex min-h-[92svh] items-center overflow-hidden bg-wall-deep bg-gradient-to-b from-wall to-wall-deep px-5 py-12 sm:px-8 lg:px-8 lg:py-16"
     >
-      <div className="mx-auto w-full max-w-[1180px]">
+      <div className="blob h-[22rem] w-[22rem] -translate-x-1/3 -translate-y-1/4 sm:h-[28rem] sm:w-[28rem]" style={{ top: "10%", left: "50%" }} />
+      <div className="relative z-[1] mx-auto w-full max-w-[1180px]">
         <Tag
           tilt="-1.2deg"
           sway
           wrapClassName="mx-auto max-w-[640px]"
-          className="px-7 pt-13 pb-11 text-center sm:px-13"
+          className="relative px-7 pt-13 pb-11 text-center sm:px-13"
         >
+          <Mascot className="absolute -right-5 -top-9 h-20 w-20 rotate-[8deg] sm:-right-8 sm:-top-10 sm:h-24 sm:w-24" />
           <h1
             id="hero-title"
             className="mx-auto mb-2 max-w-[15em] font-display text-[2.1rem] leading-[1.15] text-ink sm:text-[2.8rem] lg:text-[3.4rem]"
