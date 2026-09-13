@@ -1,6 +1,11 @@
+import { useLanguage } from "../hooks/LanguageContext";
+import { copy } from "../data/copy";
 import Tag from "./Tag";
 
 export default function About() {
+  const { lang } = useLanguage();
+  const c = copy[lang];
+
   return (
     <section
       id="sobre-mi"
@@ -22,13 +27,10 @@ export default function About() {
           }
         >
           <h2 id="sobre-title" className="mb-3 font-display text-[1.7rem] text-ink">
-            Sobre mí
+            {c.about.title}
           </h2>
           <p className="text-[1.05rem] text-ink-soft">
-            Soy Esteban, desarrollador full stack. Trabajo con las mismas tecnologías
-            que usan empresas grandes, aplicadas a resolver lo que a tu negocio realmente le
-            está costando ventas. Atiendo negocios en Bogotá en persona, y en el resto del
-            país por videollamada, sin letra pequeña ni tecnicismos.
+            {c.about.bio}
           </p>
         </Tag>
       </div>

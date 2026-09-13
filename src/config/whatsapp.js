@@ -3,9 +3,6 @@
 // del proyecto donde hay que cambiarlo.
 export const WHATSAPP_NUMBER = "573126329466";
 
-export const WHATSAPP_MESSAGE =
-  "Hola Esteban, vi tu página y quiero la revisión gratis de mi sitio web";
-
-export function whatsappLink() {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+export function whatsappLink(message) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

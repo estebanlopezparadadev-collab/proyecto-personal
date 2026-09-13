@@ -1,9 +1,14 @@
+import { useLanguage } from "../hooks/LanguageContext";
+import { copy } from "../data/copy";
 import Tag from "./Tag";
 import { WhatsAppIcon } from "./icons";
 import Mascot from "./icons/Mascot";
 import { whatsappLink } from "../config/whatsapp";
 
 export default function Hero() {
+  const { lang } = useLanguage();
+  const c = copy[lang];
+
   return (
     <section
       id="inicio"
@@ -23,18 +28,18 @@ export default function Hero() {
             id="hero-title"
             className="mx-auto mb-2 max-w-[15em] font-display text-[2.1rem] leading-[1.15] text-ink sm:text-[2.8rem] lg:text-[3.4rem]"
           >
-            ¿Tu página web tiene problemas?{" "}
-            <span className="text-accent">Yo los arreglo.</span>
+            {c.hero.title}{" "}
+            <span className="text-accent">{c.hero.titleHighlight}</span>
           </h1>
           <p className="mx-auto mb-7 max-w-[42ch] text-[1.05rem] text-ink-soft sm:text-[1.2rem]">
-            Arreglos y mantenimiento web: en Bogotá en persona, en el resto de Colombia por videollamada.
+            {c.hero.subtitle}
           </p>
           <a
-            href={whatsappLink()}
+            href={whatsappLink(c.whatsapp)}
             className="inline-flex items-center gap-2.5 rounded-full border-[2.5px] border-ink bg-accent px-8 py-4 font-body text-[1.05rem] font-extrabold text-accent-ink shadow-[5px_5px_0_var(--color-ink)] transition hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-[7px_7px_0_var(--color-ink)] active:translate-y-0.5 active:scale-[0.98] active:bg-accent-hover active:shadow-[2px_2px_0_var(--color-ink)]"
           >
             <WhatsAppIcon className="h-5.5 w-5.5" />
-            Pide tu revisión gratis
+            {c.hero.cta}
           </a>
         </Tag>
       </div>

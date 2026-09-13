@@ -1,7 +1,12 @@
+import { useLanguage } from "../hooks/LanguageContext";
+import { copy } from "../data/copy";
 import Tag from "./Tag";
 import { steps } from "../data/steps";
 
 export default function Process() {
+  const { lang } = useLanguage();
+  const c = copy[lang];
+
   return (
     <section
       id="proceso"
@@ -13,7 +18,7 @@ export default function Process() {
           id="proceso-title"
           className="mb-10 rotate-[-1deg] text-center font-display text-[1.9rem] text-paper-onwall sm:text-[2.4rem] lg:mb-12"
         >
-          Cómo trabajo
+          {c.process.title}
         </h2>
         <ol className="grid list-none grid-cols-1 gap-6 p-0 sm:grid-cols-3 sm:gap-8">
           {steps.map(({ tilt, text }, i) => (
