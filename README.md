@@ -95,13 +95,9 @@ Este proyecto ya incluye un workflow de GitHub Actions (`.github/workflows/deplo
 3. En GitHub, ve a **Settings → Pages** del repositorio y en "Build and deployment" elige **Source: GitHub Actions**.
 4. Espera a que termine la pestaña **Actions** (tarda 1-2 minutos) y GitHub te dará la URL pública, algo como `https://TU-USUARIO.github.io/TU-REPOSITORIO/`.
 
-Si el sitio se publica en `usuario.github.io/nombre-repo` (repositorio de proyecto, no el repositorio especial `usuario.github.io`), y notas que los estilos o imágenes no cargan, agrega esta línea en `vite.config.js` dentro de `defineConfig({ ... })`:
+Este proyecto ya está publicado en `https://estebanlopezparadadev-collab.github.io/proyecto-personal/`, y `vite.config.js` ya tiene `base: '/proyecto-personal/'` configurado para que los estilos y scripts carguen bien en esa subcarpeta.
 
-```js
-base: '/nombre-repo/',
-```
-
-Después de cambiarla, vuelve a hacer push a `main` para que se republique.
+Si en algún momento cambias el nombre del repositorio, actualiza esa misma línea en `vite.config.js` (y el `og:image` en `index.html`) para que coincida con el nuevo nombre, y vuelve a hacer push a `main`.
 
 ## Qué falta para dejarlo 100% listo
 
