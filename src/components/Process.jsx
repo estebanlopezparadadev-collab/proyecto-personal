@@ -6,6 +6,7 @@ import { steps } from "../data/steps";
 export default function Process() {
   const { lang } = useLanguage();
   const c = copy[lang];
+  const processSteps = steps[lang];
 
   return (
     <section
@@ -21,7 +22,7 @@ export default function Process() {
           {c.process.title}
         </h2>
         <ol className="grid list-none grid-cols-1 gap-6 p-0 sm:grid-cols-3 sm:gap-8">
-          {steps.map(({ tilt, text }, i) => (
+          {processSteps.map(({ tilt, text }, i) => (
             <Tag
               key={text}
               as="li"
