@@ -21,11 +21,13 @@ export default function Process() {
               key={text}
               as="li"
               tilt={tilt}
-              className="relative px-6 pt-12 pb-8 text-center"
+              className="pt-12 px-6 pb-8 text-center"
+              badge={
+                <span className="absolute -top-4.5 left-1/2 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full bg-accent font-display text-lg text-accent-ink shadow-[0_4px_8px_-2px_rgba(0,0,0,0.45)]">
+                  {i + 1}
+                </span>
+              }
             >
-              <span className="absolute -top-4.5 left-1/2 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full bg-accent font-display text-lg text-accent-ink shadow-[0_4px_8px_-2px_rgba(0,0,0,0.45)]">
-                {i + 1}
-              </span>
               <p className="text-[1.05rem] font-semibold text-ink">{text}</p>
             </Tag>
           ))}

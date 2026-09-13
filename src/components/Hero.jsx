@@ -13,7 +13,8 @@ export default function Hero() {
         <Tag
           tilt="-1.2deg"
           sway
-          className="mx-auto max-w-[640px] px-7 pt-13 pb-11 text-center sm:px-13"
+          wrapClassName="mx-auto max-w-[640px]"
+          className="px-7 pt-13 pb-11 text-center sm:px-13"
         >
           <h1
             id="hero-title"

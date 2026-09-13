@@ -10,14 +10,17 @@ export default function About() {
       <div className="mx-auto max-w-[1180px]">
         <Tag
           tilt="-1deg"
-          className="relative mx-auto max-w-[620px] px-7 pt-16 pb-9 text-center sm:px-9"
+          wrapClassName="mx-auto max-w-[620px]"
+          className="px-7 pt-16 pb-9 text-center sm:px-9"
+          badge={
+            <span
+              aria-hidden="true"
+              className="absolute -top-6 left-1/2 grid h-14 w-14 -translate-x-1/2 -rotate-6 place-items-center rounded-full border-4 border-wall bg-accent font-display text-2xl text-accent-ink shadow-[0_6px_12px_-3px_rgba(0,0,0,0.4)]"
+            >
+              J
+            </span>
+          }
         >
-          <span
-            aria-hidden="true"
-            className="absolute -top-6 left-1/2 grid h-14 w-14 -translate-x-1/2 -rotate-6 place-items-center rounded-full border-4 border-wall bg-accent font-display text-2xl text-accent-ink shadow-[0_6px_12px_-3px_rgba(0,0,0,0.4)]"
-          >
-            J
-          </span>
           <h2 id="sobre-title" className="mb-3 font-display text-[1.7rem] text-ink">
             Sobre mí
           </h2>

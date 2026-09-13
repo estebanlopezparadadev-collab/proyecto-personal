@@ -13,7 +13,8 @@ export default function Closing() {
         <Tag
           tilt="-1.2deg"
           sway
-          className="mx-auto max-w-[640px] px-7 pt-13 pb-11 text-center sm:px-13"
+          wrapClassName="mx-auto max-w-[640px]"
+          className="px-7 pt-13 pb-11 text-center sm:px-13"
         >
           <h2 className="mb-6 font-display text-[1.9rem] leading-[1.15] text-ink sm:text-[2.4rem]">
             Tu revisión es gratis.
