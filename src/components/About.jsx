@@ -17,7 +17,7 @@ export default function About() {
               aria-hidden="true"
               className="absolute -top-6 left-1/2 grid h-14 w-14 -translate-x-1/2 -rotate-6 place-items-center rounded-full border-4 border-wall bg-accent font-display text-2xl text-accent-ink shadow-[0_6px_12px_-3px_rgba(0,0,0,0.4)]"
             >
-              J
+              E
             </span>
           }
         >
@@ -25,10 +25,10 @@ export default function About() {
             Sobre mí
           </h2>
           <p className="text-[1.05rem] text-ink-soft">
-            Soy Julian, desarrollador full stack en Bogotá. Trabajo con las mismas tecnologías
+            Soy Esteban, desarrollador full stack. Trabajo con las mismas tecnologías
             que usan empresas grandes, aplicadas a resolver lo que a tu negocio realmente le
-            está costando ventas. Atiendo negocios de toda la ciudad, sin letra pequeña ni
-            tecnicismos.
+            está costando ventas. Atiendo negocios en Bogotá en persona, y en el resto del
+            país por videollamada, sin letra pequeña ni tecnicismos.
           </p>
         </Tag>
       </div>

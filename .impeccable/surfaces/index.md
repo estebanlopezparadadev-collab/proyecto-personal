@@ -7,7 +7,7 @@ related_targets: []
 
 # Surface: index (landing page, mode: Persuade)
 
-Audience: non-technical small business owners in Bogotá, viewing on mobile, arriving via a WhatsApp-shared link. Job: decide in seconds whether to trust Julian and tap WhatsApp for a free review. Content/proof: the pricing tiers, problem list, and 3-step process Julian gave verbatim; no fabricated testimonials, photos, or stats. Constraints: React + Vite + Tailwind CSS, componentized per section, no forms/analytics/cookies, mobile-first, <2s on 4G, all copy in Colombian Spanish customer language (symptoms, not jargon).
+Audience: non-technical small business owners in Bogotá, viewing on mobile, arriving via a WhatsApp-shared link. Job: decide in seconds whether to trust Esteban and tap WhatsApp for a free review. Content/proof: the pricing tiers, problem list, and 3-step process Esteban gave verbatim; no fabricated testimonials, photos, or stats. Constraints: React + Vite + Tailwind CSS, componentized per section, no forms/analytics/cookies, mobile-first, <2s on 4G, all copy in Colombian Spanish customer language (symptoms, not jargon).
 
 ## Direction contract
 
@@ -15,7 +15,7 @@ THESIS: A confident, friendly "fixer" brand: flat black-outlined cards with a ha
 
 OWN-WORLD: Warm cream background (`#F5EAD3`/`#E9D6AC`), near-white cards (`#FFFCF4`) with a solid `2.5px` ink-colored border and a `5px 5px 0` hard offset shadow (no blur) — a deliberately neobrutalist-adjacent device, earned because the world commits to it everywhere. Arvo (slab serif) for display type, Archivo for body. One committed orange-red accent for all CTAs/prices/icons. One muted sage-green blob as the only secondary color, used once behind the hero as a background shape. One mascot: a smiling browser-window character, used once in the hero.
 
-STORY: unchanged from the original brief — visitor lands mid-symptom, recognizes their problem among 4-6 cards, sees the fix already priced under "desde," is walked through 3 steps, meets Julian, taps WhatsApp (repeated top and bottom).
+STORY: unchanged from the original brief — visitor lands mid-symptom, recognizes their problem among 4-6 cards, sees the fix already priced under "desde," is walked through 3 steps, meets Esteban, taps WhatsApp (repeated top and bottom).
 
 FIRST VIEWPORT: One outlined hero card on the cream ground, a soft green blob peeking from behind it, the mascot pinned to its top-right corner, serif headline, orange WhatsApp button with a hard shadow.
 

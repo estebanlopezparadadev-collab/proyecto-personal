@@ -1,6 +1,6 @@
-# Página personal de Julian — Arreglo tu página web
+# Página personal de Esteban — Arreglo tu página web
 
-Landing de una sola página para ofrecer arreglos y mantenimiento web a negocios pequeños en Bogotá. Hecha en React + Vite + Tailwind CSS.
+Landing de una sola página para ofrecer arreglos y mantenimiento web a negocios pequeños: en Bogotá en persona, en el resto de Colombia por videollamada. Hecha en React + Vite + Tailwind CSS.
 
 ## Stack
 

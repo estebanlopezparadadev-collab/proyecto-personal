@@ -27,7 +27,7 @@ export default function Hero() {
             <span className="text-accent">Yo los arreglo.</span>
           </h1>
           <p className="mx-auto mb-7 max-w-[42ch] text-[1.05rem] text-ink-soft sm:text-[1.2rem]">
-            Arreglos y mantenimiento para negocios en Bogotá, sin tecnicismos ni vueltas.
+            Arreglos y mantenimiento web: en Bogotá en persona, en el resto de Colombia por videollamada.
           </p>
           <a
             href={whatsappLink()}
