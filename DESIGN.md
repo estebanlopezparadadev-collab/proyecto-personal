@@ -4,7 +4,9 @@
 
 ## World
 
-"Etiqueta de ferretería" (hardware-store price tag). The page reads as a pegboard wall of hand-written price tags in a Bogotá ferretería: every symptom, price, and step is a punched, slightly-rotated cardstock tag hung against a warm kraft wall. No SaaS gradients, no dark-agency hero, no corporate card grid — the world is retail, tactile, and local.
+"Etiqueta de ferretería" (hardware-store price tag). The page reads as a pegboard wall of hand-written price tags in a Bogotá ferretería: every symptom, price, and step is a punched, slightly-rotated cardstock tag hung against a warm cream wall. No SaaS gradients, no dark-agency hero, no corporate card grid — the world is retail, tactile, and local.
+
+Palette revised after user + reference review against real acclaimed freelance landing pages (landingfolio.com): the original kraft-brown wall read too dark/heavy; a warm cream wall (closer to well-received examples like Bob Meijer's) keeps the same hung-tag mechanism while feeling lighter and more inviting.
 
 ## Color
 
@@ -12,17 +14,17 @@ Strategy: **Committed** — one saturated accent (safety orange-red) carries rea
 
 | Token | Value | Use |
 |---|---|---|
-| `--color-wall` | `#6B4A2C` | Section background (the pegboard wall) |
-| `--color-wall-deep` | `#4A3119` | Hero/closing wall, footer |
-| `--color-tag` | `#F4E6C4` | Tag background (the cardstock) |
-| `--color-tag-edge` | `#E3CC9C` | Tag borders, dashed dividers, grommet ring |
+| `--color-wall` | `#F5EAD3` | Section background (the pegboard wall) |
+| `--color-wall-deep` | `#E9D6AC` | Hero/closing wall, footer |
+| `--color-tag` | `#FFFCF4` | Tag background (the cardstock) |
+| `--color-tag-edge` | `#E7D6AE` | Tag borders, dashed dividers, grommet ring |
 | `--color-ink` | `#2B2318` | Headings and emphasized text on tags |
 | `--color-ink-soft` | `#5B4A36` | Body text on tags |
 | `--color-accent` | `#C23A17` | Prices, icons, CTA buttons |
 | `--color-accent-bright` | `#E2551F` | Focus ring only |
 | `--color-accent-hover` | `#A82F12` | Button hover/active (darkens, never brightens — keeps 4.5:1+ contrast with cream text) |
 | `--color-accent-ink` | `#FFF6E9` | Text/icons on accent backgrounds |
-| `--color-paper-onwall` | `#E9D6A8` | Text directly on the wall (section titles, body copy) |
+| `--color-paper-onwall` | `#2B2318` | Text directly on the wall (section titles, body copy) — dark ink now that the wall is light |
 
 All pairings were verified at build time against WCAG AA (4.5:1 body / 3:1 large text). `--color-accent` on `--color-tag` only carries large/bold text (prices, headings); small text on accent always uses `--color-accent-ink`, never `--color-ink`.
 
@@ -34,7 +36,9 @@ All pairings were verified at build time against WCAG AA (4.5:1 body / 3:1 large
 
 ## The tag (core component)
 
-Every content block on the page is a `.tag`: a cream card with a real punched hole (via `mask-image: radial-gradient(...)`, not a decorative circle — the wall shows through), a grommet ring, a soft elevation shadow (no hairline border — paper doesn't have a drawn outline), a per-instance rotation via the `--tilt` CSS custom property, and a hover lift. Implemented once in `src/components/Tag.jsx` + `.tag` in `src/index.css`, reused by every section — never recreate the card shell ad hoc.
+Every content block on the page is a `.tag-wrap` (string + peg + rotation) wrapping a `.tag` (the card itself): a cream card with a real punched hole (via `mask-image: radial-gradient(...)`, not a decorative circle — the wall shows through), a white paper reinforcement ring around the hole (like a real shipping-tag sticker), a hand-drawn twine loop up to a peg on the wall, a subtle paper-grain background, a soft elevation shadow (no hairline border — paper doesn't have a drawn outline), a per-instance rotation via the `--tilt` CSS custom property, and a hover lift. Implemented in `src/components/Tag.jsx` + `.tag-wrap`/`.tag`/`.tag-string` in `src/index.css`, reused by every section — never recreate the card shell ad hoc.
+
+A badge that must overflow above the tag's edge (the numbered circle in "Cómo trabajo", the "J" stamp in "Sobre mí") is passed as Tag's `badge` prop, rendered as a sibling of `.tag`, not a child — a child positioned above the tag's own box gets hard-clipped by the punch-hole mask.
 
 ## Motion
 

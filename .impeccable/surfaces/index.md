@@ -13,11 +13,11 @@ Audience: non-technical small business owners in Bogotá, viewing on mobile, arr
 
 THESIS: The page owns "your problem already has a price tag" — every symptom and every fix reads like an item hanging in a ferretería, priced and ready, refusing the SaaS-gradient/dark-agency hero every dev-services page defaults to.
 
-OWN-WORLD: Warm kraft-cardstock ground, thick black-marker display lettering for headlines/prices, a plain workhorse grotesk for body copy, one committed hardware-store safety-orange/red carrying real coverage (buttons, price numbers, the punched-hole motif) — never a scattered accent. Every content block is a "tag": rounded-corner card, a punched hole with a thread loop, a faint cast shadow, a few degrees of hand-hung rotation per tag so the wall reads assembled by hand, not templated.
+OWN-WORLD: Warm cream cardstock ground (revised from the original kraft-brown after comparing against acclaimed real freelance landing pages on landingfolio.com, which skew light/warm, not dark/corporate), thick black-marker display lettering for headlines/prices, a plain workhorse grotesk for body copy, one committed hardware-store safety-orange/red carrying real coverage (buttons, price numbers, the punched-hole motif) — never a scattered accent. Every content block is a "tag": rounded-corner card, a real punched hole with a white paper reinforcement ring and a hand-drawn twine loop up to a peg, a faint cast shadow, a few degrees of hand-hung rotation per tag so the wall reads assembled by hand, not templated.
 
 STORY: Visitor lands mid-symptom ("¿Tu página tiene problemas?"), recognizes their own tag among 4-6 problem-tags, sees the fix already priced under "desde," is walked through 3 hung steps, meets Julian on one trust tag, and taps the same WhatsApp button repeated top and bottom.
 
-FIRST VIEWPORT: One large hero tag fills the screen — punched hole top-left, hand-marker headline plus one-line subtitle, a big orange WhatsApp tag-button, ever so slightly rotated as if just hung, kraft wall texture behind it.
+FIRST VIEWPORT: One large hero tag fills the screen — punched hole top-left with visible string to a peg, hand-marker headline plus one-line subtitle, a big orange WhatsApp tag-button, ever so slightly rotated as if just hung, cream pegboard wall texture behind it.
 
 FORM: "Etiqueta de ferretería" (hardware-store price tag), position 6 of 7 in the audience-derived candidate list, assigned by concept-seed roll (seed key b34df1f9). Raised over three declined catalog challengers: committed accent-color density from the cutting-bench-rail challenger, a fixed-scale antes/después comparison pairing from the botanical-folio challenger, and a visible "mended tag" repair motif from the raku-ceramics challenger.
 
@@ -25,4 +25,4 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 ## Unresolved decisions
 
-None outstanding — all six sections, copy, pricing, and CTA behavior were fully specified by the user. Stack changed mid-build from static HTML/CSS/JS to React + Vite + Tailwind at the user's explicit request; the visual world and content were carried over unchanged.
+None outstanding. Stack changed mid-build from static HTML/CSS/JS to React + Vite + Tailwind at the user's explicit request. Palette changed mid-build from kraft-brown to warm cream after user feedback (relayed from a friend's voice note preferring a dark "professional portfolio" look) was checked against real examples on landingfolio.com — neither of the two top-viewed freelance examples inspected (Bob Meijer, Jack McDade) was dark/gray-corporate, both warm or hand-drawn/playful — and the user chose the warm-cream direction over reverting to dark.

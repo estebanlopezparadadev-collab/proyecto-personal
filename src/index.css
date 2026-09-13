@@ -4,17 +4,17 @@
   --font-display: "Permanent Marker", "Segoe UI", cursive;
   --font-body: "Archivo", "Segoe UI", system-ui, sans-serif;
 
-  --color-wall: #6B4A2C;
-  --color-wall-deep: #4A3119;
-  --color-tag: #F4E6C4;
-  --color-tag-edge: #E3CC9C;
+  --color-wall: #F5EAD3;
+  --color-wall-deep: #E9D6AC;
+  --color-tag: #FFFCF4;
+  --color-tag-edge: #E7D6AE;
   --color-ink: #2B2318;
   --color-ink-soft: #5B4A36;
   --color-accent: #C23A17;
   --color-accent-bright: #E2551F;
   --color-accent-hover: #A82F12;
   --color-accent-ink: #FFF6E9;
-  --color-paper-onwall: #E9D6A8;
+  --color-paper-onwall: #2B2318;
 
   --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
 }

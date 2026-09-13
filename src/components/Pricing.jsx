@@ -35,8 +35,8 @@ export default function Pricing() {
           ))}
         </div>
         <p className="mx-auto mt-10 max-w-[46ch] text-center text-base text-paper-onwall lg:mt-11">
-          La revisión inicial es <strong className="text-tag">gratis</strong>. La cotización es{" "}
-          <strong className="text-tag">fija</strong>: sabes cuánto vas a pagar antes de que empiece
+          La revisión inicial es <strong className="text-accent">gratis</strong>. La cotización es{" "}
+          <strong className="text-accent">fija</strong>: sabes cuánto vas a pagar antes de que empiece
           a trabajar.
         </p>
       </div>
