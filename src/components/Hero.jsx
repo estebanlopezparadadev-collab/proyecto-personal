@@ -28,7 +28,7 @@ export default function Hero() {
           </p>
           <a
             href={whatsappLink()}
-            className="inline-flex items-center gap-2.5 rounded-full bg-accent px-8 py-4 font-body text-[1.05rem] font-extrabold text-accent-ink shadow-[0_10px_22px_-10px_rgba(0,0,0,0.6)] transition hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-[0_14px_26px_-10px_rgba(0,0,0,0.65)] active:translate-y-px active:scale-[0.98] active:bg-accent-hover"
+            className="inline-flex items-center gap-2.5 rounded-full border-[2.5px] border-ink bg-accent px-8 py-4 font-body text-[1.05rem] font-extrabold text-accent-ink shadow-[5px_5px_0_var(--color-ink)] transition hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-[7px_7px_0_var(--color-ink)] active:translate-y-0.5 active:scale-[0.98] active:bg-accent-hover active:shadow-[2px_2px_0_var(--color-ink)]"
           >
             <WhatsAppIcon className="h-5.5 w-5.5" />
             Pide tu revisión gratis
